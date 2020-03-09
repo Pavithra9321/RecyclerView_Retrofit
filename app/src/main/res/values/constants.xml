@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="BASE_URL">http://dummy.restapiexample.com/api/v1/</string>
+</resources>

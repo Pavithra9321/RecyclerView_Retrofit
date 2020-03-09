@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RecyclerView_Retrofit</string>
+    <string name="network_connection_error">No Internet Connection, Please try again after sometime.</string>
+
+</resources>
