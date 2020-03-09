@@ -18,7 +18,7 @@ import retrofit2.Response;
 public class ListPresenter {
 
     public static void getDataList(int requestCode, final NetworkCallback callback) {
-        rx.Observable<Response<Map>> observable = ServiceManager.callApiCMOL(APIEndpoints.class, "dataList");
+        rx.Observable<Response<Map>> observable = ServiceManager.callApiCMOL(APIEndpoints.class, "dataList", new HashMap<>(), HashMap.class);
         observable.subscribe(new NetworkSubscriber(new NetworkCallback() {
             @Override
             public void onSuccess(int resultCode, Object response) {

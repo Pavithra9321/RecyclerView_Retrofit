@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private NestedScrollView scrollView;
     private SwipeRefreshLayout swipe_refresh;
 
-    private List<DataModel.Data> dataModels;
+    private List<DataModel.AppliedProduct> dataModels;
     private DataListAdapter dataListAdapter;
 
     @Override
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.e("Success ::" , response.toString());
                 dataModels = new ArrayList<>();
                 DataModel dataModel = (DataModel) response;
-                dataModels = dataModel.getData();
+                dataModels = dataModel.getData().getAppliedProduct();
 
                 dataListAdapter = new DataListAdapter(dataModels, MainActivity.this);
                 RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(MainActivity.this);
